@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="sling:OsgiConfig"
+          include-filter.config.enabled="{Boolean}true"
+          include-filter.config.path="/content/layout-wcm"
+          include-filter.config.resource-types="[layout-wcm/components/structure-page/layout/headerpage-personalized]"
+          include-filter.config.include-type="SSI"
+          include-filter.config.add_comment="{Boolean}true"
+          include-filter.config.selector="nocache"
+          include-filter.config.ttl=""
+          include-filter.config.required_header="Server-Agent=Communique-Dispatcher"
+          include-filter.config.ignoreUrlParams="[]"
+          include-filter.config.rewrite="{Boolean}true"
+/>

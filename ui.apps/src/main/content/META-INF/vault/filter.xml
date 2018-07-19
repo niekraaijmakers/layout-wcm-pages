@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/layout-wcm">
+        <exclude pattern="/apps/layout-wcm/install" />
+    </filter>
+    <filter root="/conf/layout-wcm"/>
+    <filter root="/config"/>
+    <filter root="/content/layout-wcm"/>
+
+    <filter root="/apps/sling" />
+    <filter root="/apps/settings/granite/operations/hc" />    
+    <filter root="/etc/designs/layout-wcm"/>
+</workspaceFilter>

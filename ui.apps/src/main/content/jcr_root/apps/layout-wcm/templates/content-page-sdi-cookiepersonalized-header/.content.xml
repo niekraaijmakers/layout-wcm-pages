@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="Content page using the header / footer page to render it's layout. But this page has a personalized header based on a request cookie (user group). A different user group or logged out state means a different header."
+    jcr:primaryType="cq:Template"
+    jcr:title="Adobe Examples - Layout Pages Example - Content Page Personalized"
+    allowedPaths="[/content/layout-wcm(/.*)]">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="layout-wcm/components/structure/page/contentpage-personalized"/>
+</jcr:root>
