@@ -11,31 +11,30 @@ import org.apache.sling.api.request.RequestPathInfo;
 
 /**
  * HeaderPageCacheKey
- * <p>
- * A key that only contains a resource path
- * </p>
  */
 public class HeaderPageCacheKey extends AbstractCacheKey implements CacheKey {
 
-    private final CookieKeyValueMap keyValueMap;
-
+    private final RequestKeyValueMap cookieKeyValueMap;
+    private final RequestKeyValueMap headerKeyValueMap;
     private final String selector;
     private final String extension;
 
-    public HeaderPageCacheKey(SlingHttpServletRequest request, HttpCacheConfig cacheConfig, CookieKeyValueMap keyValueMap) {
+    public HeaderPageCacheKey(SlingHttpServletRequest request, HttpCacheConfig cacheConfig, RequestKeyValueMap cookieKeyValueMap, RequestKeyValueMap headerKeyValueMap) {
         super(request, cacheConfig);
+        this.headerKeyValueMap = headerKeyValueMap;
         RequestPathInfo pathInfo = request.getRequestPathInfo();
-        this.keyValueMap = keyValueMap;
+        this.cookieKeyValueMap = cookieKeyValueMap;
         this.selector =      pathInfo.getSelectorString();
         this.extension     = pathInfo.getExtension();
     }
 
-    public HeaderPageCacheKey(String uri, HttpCacheConfig cacheConfig, CookieKeyValueMap keyValueMap){
+    public HeaderPageCacheKey(String uri, HttpCacheConfig cacheConfig, RequestKeyValueMap cookieKeyValueMap, RequestKeyValueMap headerKeyValueMap){
         super(uri, cacheConfig);
         RequestPathInfo pathInfo = new PathInfo(uri);
         this.selector =      pathInfo.getSelectorString();
         this.extension     = pathInfo.getExtension();
-        this.keyValueMap = keyValueMap;
+        this.cookieKeyValueMap = cookieKeyValueMap;
+        this.headerKeyValueMap = headerKeyValueMap;
     }
 
     @Override
@@ -48,7 +47,8 @@ public class HeaderPageCacheKey extends AbstractCacheKey implements CacheKey {
         HeaderPageCacheKey that = (HeaderPageCacheKey) o;
         return new EqualsBuilder()
                 .append(resourcePath, that.resourcePath)
-                .append(keyValueMap, that.keyValueMap)
+                .append(cookieKeyValueMap, that.cookieKeyValueMap)
+                .append(headerKeyValueMap, that.headerKeyValueMap)
                 .append(getExtension(), that.getExtension())
                 .append(getSelector(), that.getSelector())
                 .isEquals();
@@ -64,7 +64,8 @@ public class HeaderPageCacheKey extends AbstractCacheKey implements CacheKey {
     @Override
     public String toString(){
         StringBuilder formattedString = new StringBuilder(resourcePath + "." + getSelector() + "." + getExtension());
-        formattedString.append(keyValueMap.toString());
+        formattedString.append(cookieKeyValueMap.toString());
+        formattedString.append(headerKeyValueMap.toString());
         return formattedString.toString();
     }
 
@@ -77,7 +78,11 @@ public class HeaderPageCacheKey extends AbstractCacheKey implements CacheKey {
         return extension;
     }
 
-    public CookieKeyValueMap getKeyValueMap() {
-        return keyValueMap;
+    public RequestKeyValueMap getCookieKeyValueMap() {
+        return cookieKeyValueMap;
+    }
+
+    public RequestKeyValueMap getHeaderKeyValueMap() {
+        return headerKeyValueMap;
     }
 }

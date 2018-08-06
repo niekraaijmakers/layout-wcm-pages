@@ -90,6 +90,8 @@ public class AutomatedLayoutPageInvalidator implements ResourceChangeListener {
                     for(String userGroup :USER_GROUPS){
                         String target = layoutPagePath + PATH_SUFFIX + String.format("[CookieKeyValues:%s=%s]", USER_GROUP, userGroup);
                         engine.invalidateCache(target);
+                        //also for request keys specifically for dispatcher.
+                        engine.invalidateCache(target + "[HeaderKeyValues:Server-Agent=Communique-Dispatcher]");
                     }
 
                 } catch (HttpCachePersistenceException | HttpCacheKeyCreationException e) {

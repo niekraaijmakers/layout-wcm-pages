@@ -4,7 +4,7 @@
           jcr:primaryType="sling:OsgiConfig"
           include-filter.config.enabled="{Boolean}true"
           include-filter.config.path="/content/layout-wcm"
-          include-filter.config.resource-types="[layout-wcm/components/structure-page/layout/headerpage-personalized]"
+          include-filter.config.resource-types="[/apps/layout-wcm/components/structure/page/layout/headerpage]"
           include-filter.config.include-type="SSI"
           include-filter.config.add_comment="{Boolean}true"
           include-filter.config.selector="nocache"

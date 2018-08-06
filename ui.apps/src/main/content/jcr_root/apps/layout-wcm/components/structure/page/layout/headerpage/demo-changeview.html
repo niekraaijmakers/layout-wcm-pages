@@ -1,0 +1,15 @@
+<script type="text/javascript">
+    function changeCookieValue(select){
+        var newUserGroup = select.value;
+        if(newUserGroup.length > 0){
+            document.cookie = "USER_GROUP=" + newUserGroup + "; path=/";
+            window.location.reload(true);
+        }
+    }
+</script>
+
+<select id="demo" onchange="changeCookieValue(this)">
+    <option value="">Select to load different view</option>
+    <option value="administrators">Admin view</option>
+    <option value="editors">editor view</option>
+</select>

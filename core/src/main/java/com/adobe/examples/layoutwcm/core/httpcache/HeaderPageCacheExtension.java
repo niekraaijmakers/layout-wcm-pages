@@ -7,7 +7,8 @@ import com.adobe.acs.commons.httpcache.exception.HttpCacheRepositoryAccessExcept
 import com.adobe.acs.commons.httpcache.keys.CacheKey;
 import com.adobe.acs.commons.httpcache.keys.CacheKeyFactory;
 import com.adobe.examples.layoutwcm.core.httpcache.definitions.HeaderCacheExtensionConfig;
-import com.adobe.examples.layoutwcm.core.httpcache.key.CookieKeyValueMap;
+import com.adobe.examples.layoutwcm.core.httpcache.key.HeaderKeyValueMapBuilder;
+import com.adobe.examples.layoutwcm.core.httpcache.key.RequestKeyValueMap;
 import com.adobe.examples.layoutwcm.core.httpcache.key.CookieKeyValueMapBuilder;
 import com.adobe.examples.layoutwcm.core.httpcache.key.HeaderPageCacheKey;
 import com.google.common.collect.ImmutableSet;
@@ -40,9 +41,12 @@ public class HeaderPageCacheExtension implements HttpCacheConfigExtension, Cache
     private List<Pattern> resourcePathPatterns;
     private List<Pattern> selectorPatterns;
     private List<Pattern> extensionPatterns;
+    private Set<String> headerKeys;
     private Set<String> cookieKeys;
     private Set<String> resourceTypes;
     private boolean  emptyCookieKeySetAllowed;
+    private boolean  emptyHeaderKeySetAllowed;
+
 
     private String configName;
 
@@ -71,7 +75,11 @@ public class HeaderPageCacheExtension implements HttpCacheConfigExtension, Cache
 
         if(!emptyCookieKeySetAllowed){
             Set<Cookie> presentCookies = ImmutableSet.copyOf(request.getCookies());
-            return containsAtLeastOneMatch(presentCookies);
+            return containsAtLeastOneCookieKey(presentCookies);
+        }
+
+        if(!emptyHeaderKeySetAllowed){
+            return containsAtLeastOneHeaderFromConfig(request);
         }
 
         return true;
@@ -87,9 +95,14 @@ public class HeaderPageCacheExtension implements HttpCacheConfigExtension, Cache
         return false;
     }
 
-    private boolean containsAtLeastOneMatch(Set<Cookie> presentCookies){
+    private boolean containsAtLeastOneHeaderFromConfig(SlingHttpServletRequest request){
+        HeaderKeyValueMapBuilder builder = new HeaderKeyValueMapBuilder(headerKeys, request);
+        RequestKeyValueMap map = builder.build();
+        return !map.isEmpty();
+    }
+    private boolean containsAtLeastOneCookieKey(Set<Cookie> presentCookies){
         CookieKeyValueMapBuilder builder = new CookieKeyValueMapBuilder(cookieKeys, presentCookies);
-        CookieKeyValueMap map = builder.build();
+        RequestKeyValueMap map = builder.build();
         return !map.isEmpty();
     }
 
@@ -113,13 +126,19 @@ public class HeaderPageCacheExtension implements HttpCacheConfigExtension, Cache
     public CacheKey build(final SlingHttpServletRequest slingHttpServletRequest, final HttpCacheConfig cacheConfig)
             throws HttpCacheKeyCreationException {
         ImmutableSet<Cookie> presentCookies = ImmutableSet.copyOf(slingHttpServletRequest.getCookies());
-        CookieKeyValueMapBuilder builder = new CookieKeyValueMapBuilder(cookieKeys, presentCookies);
-        return new HeaderPageCacheKey(slingHttpServletRequest, cacheConfig, builder.build());
+        CookieKeyValueMapBuilder cookieKeyValueMapBuilder = new CookieKeyValueMapBuilder(cookieKeys, presentCookies);
+        HeaderKeyValueMapBuilder headerKeyValueMapBuilder = new HeaderKeyValueMapBuilder(headerKeys, slingHttpServletRequest);
+        return new HeaderPageCacheKey(
+                slingHttpServletRequest,
+                cacheConfig,
+                cookieKeyValueMapBuilder.build(),
+                headerKeyValueMapBuilder.build()
+        );
     }
 
 
     public CacheKey build(String resourcePath, HttpCacheConfig httpCacheConfig) throws HttpCacheKeyCreationException {
-        return new HeaderPageCacheKey(resourcePath, httpCacheConfig, new CookieKeyValueMap());
+        return new HeaderPageCacheKey(resourcePath, httpCacheConfig, new RequestKeyValueMap("CookieKeyValueMap"), new RequestKeyValueMap("HeaderKeyValueMap"));
     }
 
     @Override
@@ -132,7 +151,7 @@ public class HeaderPageCacheExtension implements HttpCacheConfigExtension, Cache
 
         HeaderPageCacheKey thatKey = (HeaderPageCacheKey) key;
 
-        return new HeaderPageCacheKey(thatKey.getUri(), cacheConfig, thatKey.getKeyValueMap()).equals(key);
+        return new HeaderPageCacheKey(thatKey.getUri(), cacheConfig, thatKey.getCookieKeyValueMap(), thatKey.getHeaderKeyValueMap()).equals(key);
     }
 
     @Activate
@@ -141,10 +160,12 @@ public class HeaderPageCacheExtension implements HttpCacheConfigExtension, Cache
         this.resourcePathPatterns = compileToPatterns(config.resourcePathPatterns());
         this.extensionPatterns = compileToPatterns(config.extensions());
         this.selectorPatterns = compileToPatterns(config.selectors());
+        this.headerKeys = ImmutableSet.copyOf(config.headerKeys());
         this.cookieKeys = ImmutableSet.copyOf(config.allowedCookieKeys());
         this.resourceTypes = ImmutableSet.copyOf(config.resourceTypes());
         this.configName = config.configName();
         this.emptyCookieKeySetAllowed = config.emptyCookieKeySetAllowed();
+        this.emptyHeaderKeySetAllowed = config.emptyHeaderKeySetAllowed();
     }
 
     private List<Pattern> compileToPatterns(final String[] regexes) {

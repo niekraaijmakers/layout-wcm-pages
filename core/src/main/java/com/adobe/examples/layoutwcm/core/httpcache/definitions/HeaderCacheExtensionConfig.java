@@ -52,8 +52,20 @@ public @interface HeaderCacheExtensionConfig {
     String[] allowedCookieKeys() default {};
 
     @AttributeDefinition(
-            name = "Empty is allowed",
-            description = "Cookie keys that will used to generate a cache key."
+            name = "Empty cookie is allowed",
+            description = "If no cookie found within cookie key generation set, still proceed"
     )
     boolean emptyCookieKeySetAllowed() default false;
+
+    @AttributeDefinition(
+            name = "Header keys",
+            description = "Header keys that will be used to generate a cache key"
+    )
+    String[] headerKeys();
+
+    @AttributeDefinition(
+            name = "Empty header match is allowed",
+            description = "If no header found within header key generation set, still proceed"
+    )
+    boolean emptyHeaderKeySetAllowed() default true;
 }

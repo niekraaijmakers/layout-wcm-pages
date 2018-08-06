@@ -6,14 +6,17 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 /**
- * CookieKeyValueMap
+ * RequestKeyValueMap
  * <p>
  * Basically a HashMap with a nice toString function for the CookieCacheKey to hold cookies into.
  * </p>
  */
-public class CookieKeyValueMap extends HashMap<String,String> {
+public class RequestKeyValueMap extends HashMap<String,String> {
 
-    public CookieKeyValueMap() {
+    private final String type;
+
+    public RequestKeyValueMap(String type) {
+        this.type = type;
     }
 
 
@@ -25,7 +28,7 @@ public class CookieKeyValueMap extends HashMap<String,String> {
         Iterator<Entry<String,String>> entries = entrySet().iterator();
 
         if(!isEmpty()){
-            result.append("[CookieKeyValues:");
+            result.append("[" + type + ":");
             while (entries.hasNext()) {
 
                 Entry<String, String> entry = entries.next();

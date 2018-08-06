@@ -13,7 +13,7 @@ public class CookieKeyValueMapBuilder {
 
     private final Set<String> allowedKeys;
     private final Set<Cookie> presentCookies;
-    private final CookieKeyValueMap keyValueMap = new CookieKeyValueMap();
+    private final RequestKeyValueMap keyValueMap = new RequestKeyValueMap("CookieKeyValueMap");
 
     public CookieKeyValueMapBuilder(Set<String> allowedKeys, Set<Cookie> presentCookies){
 
@@ -22,7 +22,7 @@ public class CookieKeyValueMapBuilder {
     }
 
 
-    public CookieKeyValueMap build(){
+    public RequestKeyValueMap build(){
 
         presentCookies.stream()
                 .filter( cookie -> allowedKeys.contains(cookie.getName()))
