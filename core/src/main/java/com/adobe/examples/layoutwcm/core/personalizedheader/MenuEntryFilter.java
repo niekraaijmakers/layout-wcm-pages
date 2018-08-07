@@ -17,15 +17,7 @@ import java.util.Set;
 
 import static com.adobe.examples.layoutwcm.core.personalizedheader.Contants.USER_GROUP;
 
-/**
- * WHAT IS IT ???
- * <p>
- * WHAT PURPOSE THAT IT HAS ???
- * </p>
- *
- * @author niek.raaijkmakers@external.cybercon.de
- * @since 2018-07-19
- */
+
 @Model(adaptables = SlingHttpServletRequest.class)
 public class MenuEntryFilter {
 

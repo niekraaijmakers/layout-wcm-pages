@@ -6,15 +6,7 @@ import javax.servlet.http.Cookie;
 import java.util.Enumeration;
 import java.util.Set;
 
-/**
- * WHAT IS IT ???
- * <p>
- * WHAT PURPOSE THAT IT HAS ???
- * </p>
- *
- * @author niek.raaijkmakers@external.cybercon.de
- * @since 2018-08-06
- */
+
 public class HeaderKeyValueMapBuilder {
     private final Set<String> allowedKeys;
     private final SlingHttpServletRequest slingHttpServletRequest;

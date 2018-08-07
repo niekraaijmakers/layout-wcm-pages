@@ -4,15 +4,7 @@ import com.google.common.collect.ImmutableSet;
 
 import java.util.Set;
 
-/**
- * WHAT IS IT ???
- * <p>
- * WHAT PURPOSE THAT IT HAS ???
- * </p>
- *
- * @author niek.raaijkmakers@external.cybercon.de
- * @since 2018-07-19
- */
+
 public class Contants {
 
     private Contants(){};
