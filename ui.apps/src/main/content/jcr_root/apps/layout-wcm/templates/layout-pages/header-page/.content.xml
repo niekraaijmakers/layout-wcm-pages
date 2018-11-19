@@ -6,6 +6,6 @@
     allowedPaths="[/content/layout-wcm(/.*)]">
     <jcr:content
         jcr:primaryType="cq:PageContent"
-        cq:allowedTemplates="[/apps/layout-wcm/layout-pages/templates/header-menu-mainentry-page,/apps/layout-wcm/layout-pages/templates/header-menu-mainentry-variant-b-page]"
+        cq:allowedTemplates="[/apps/layout-wcm/templates/layout-pages/header-menu-mainentry-page,/apps/layout-wcm/templates/layout-pages/header-menu-mainentry-variant-b-page]"
         sling:resourceType="layout-wcm/components/structure/page/layout/headerpage"/>
 </jcr:root>

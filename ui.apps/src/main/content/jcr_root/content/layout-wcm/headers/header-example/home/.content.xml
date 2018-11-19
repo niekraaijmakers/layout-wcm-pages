@@ -2,8 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:allowedTemplates="[/apps/layout-wcm/layout-pages/templates/header-menu-subentry-page]"
-        cq:template="/apps/layout-wcm/layout-pages/templates/header-menu-mainentry-page"
+        cq:allowedTemplates="[/apps/layout-wcm/templates/layout-pages/header-menu-subentry-page]"
+        cq:template="/apps/layout-wcm/templates/layout-pages/header-menu-mainentry-page"
         jcr:primaryType="cq:PageContent"
         jcr:title="Home"
         sling:resourceType="layout-wcm/components/structure/page/layout/headerpage/menupage-mainentry"
