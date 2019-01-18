@@ -1,3 +1,5 @@
+Intro: https://youtu.be/hPwjEDE1Oks
+
 # wcm-layout-pages
 Render header and footer based on content pages dedicated for this purpose only.
 Pages have it's own special template and are included with the content rendition.
