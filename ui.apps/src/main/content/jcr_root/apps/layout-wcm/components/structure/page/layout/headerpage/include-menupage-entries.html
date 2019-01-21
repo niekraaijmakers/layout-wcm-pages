@@ -3,7 +3,7 @@
     <sly data-sly-list.childEntry="${resourcePage.listChildren}">
         <sly data-sly-use.filter="${'com.adobe.examples.layoutwcm.core.personalizedheader.MenuEntryFilter' @ menuEntryPage = childEntry}"
              data-sly-test="${!filter.filtered}"
-             data-sly-resource="${childEntry.path @ appendPath='jcr:content', resourceType=childEntry.properties['sling:resourceType']}"/>
+             data-sly-resource="${childEntry.path @ addSelectors=['content'], appendPath='jcr:content', resourceType=childEntry.properties['sling:resourceType']}"/>
     </sly>
 
 </template>
