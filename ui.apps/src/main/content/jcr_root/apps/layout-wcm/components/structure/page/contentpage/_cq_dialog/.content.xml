@@ -111,18 +111,19 @@
                                 <items jcr:primaryType="nt:unstructured">
                                     <headerPagePath
                                             cq:showOnCreate="{Boolean}true"
+
                                             jcr:primaryType="nt:unstructured"
                                             rootPath="/content"
                                             fieldDescription="Please select a header page to render the page header with."
-                                            fieldLabel="Header page"
+                                            fieldLabel="Header path"
                                             sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
                                             name="./headerPagePath"/>
                                     <footerPagePath
                                             cq:showOnCreate="{Boolean}true"
                                             jcr:primaryType="nt:unstructured"
                                             rootPath="/content"
-                                            fieldDescription="Please select a header page to render the page header with."
-                                            fieldLabel="Header page"
+                                            fieldDescription="Please select a header page to render the page footer with."
+                                            fieldLabel="Footer path"
                                             sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
                                             name="./footerPagePath"/>
                                 </items>
