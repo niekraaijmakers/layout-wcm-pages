@@ -16,6 +16,8 @@
 
 <a href="https://www.youtube.com/watch?v=H41ZFSEW0DM" target="_blank"><img src="https://img.youtube.com/vi/H41ZFSEW0DM/0.jpg" alt="Author and Dispatcher demo"/></a>
 
+(sorry, the outro is cut off at the end, recording problems.)
+
 # wcm-layout-pages
 Render header and footer based on content pages dedicated for this purpose only.
 Pages have it's own special template and are included with the content rendition.
