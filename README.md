@@ -1,23 +1,20 @@
-# Video walkthroughs (click to view youtube vid):
+# Video walkthroughs (click to view video):
 
 ## Introduction / benefits / comparison:
 
-[![Introduction Video](https://img.youtube.com/vi/hPwjEDE1Oks/0.jpg)](https://www.youtube.com/watch?v=hPwjEDE1Oks)
+<a href="https://www.youtube.com/watch?v=hPwjEDE1Oks" target="_blank"><img src="https://img.youtube.com/vi/hPwjEDE1Oks/0.jpg" alt="Introduction Video"/></a>
 
 ## Developer walkthrough - basic
 
-[![Introduction Video](https://img.youtube.com/vi/IRQacpaZ6GY/0.jpg)](https://www.youtube.com/watch?v=IRQacpaZ6GY)
-
+<a href="IRQacpaZ6GY" target="_blank"><img src="https://img.youtube.com/vi/IRQacpaZ6GY/0.jpg" alt="Basic Developer walkthrough"/></a>
 
 ## Developer walkthrough - advanced
 
-[![Introduction Video](https://img.youtube.com/vi/_F2qyZiXnZo/0.jpg)](https://www.youtube.com/watch?v=_F2qyZiXnZo)
-
+<a href="https://www.youtube.com/watch?v=_F2qyZiXnZo" target="_blank"><img src="https://img.youtube.com/vi/_F2qyZiXnZo/0.jpg" alt="Advanced developer walkthrough"/></a>
 
 ## Author + dispatcher demo
 
-[![Author and Dispatcher demo](https://img.youtube.com/vi/H41ZFSEW0DM/0.jpg)](https://www.youtube.com/watch?v=H41ZFSEW0DM)
-
+<a href="https://www.youtube.com/watch?v=H41ZFSEW0DM" target="_blank"><img src="https://img.youtube.com/vi/H41ZFSEW0DM/0.jpg" alt="Author and Dispatcher demo"/></a>
 
 # wcm-layout-pages
 Render header and footer based on content pages dedicated for this purpose only.
