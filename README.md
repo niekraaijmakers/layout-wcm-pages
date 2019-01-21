@@ -1,4 +1,23 @@
-Intro: https://youtu.be/hPwjEDE1Oks
+# Video walkthroughs (click to view youtube vid):
+
+## Introduction / benefits / comparison:
+
+[![Introduction Video](https://img.youtube.com/vi/hPwjEDE1Oks/0.jpg)](https://www.youtube.com/watch?v=hPwjEDE1Oks)
+
+## Developer walkthrough - basic
+
+[![Introduction Video](https://img.youtube.com/vi/IRQacpaZ6GY/0.jpg)](https://www.youtube.com/watch?v=IRQacpaZ6GY)
+
+
+## Developer walkthrough - advanced
+
+[![Introduction Video](https://img.youtube.com/vi/_F2qyZiXnZo/0.jpg)](https://www.youtube.com/watch?v=_F2qyZiXnZo)
+
+
+## Author + dispatcher demo
+
+[![Author and Dispatcher demo](https://img.youtube.com/vi/H41ZFSEW0DM/0.jpg)](https://www.youtube.com/watch?v=H41ZFSEW0DM)
+
 
 # wcm-layout-pages
 Render header and footer based on content pages dedicated for this purpose only.
