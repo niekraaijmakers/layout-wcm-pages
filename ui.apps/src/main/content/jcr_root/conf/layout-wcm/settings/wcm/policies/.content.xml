@@ -1,145 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
-    jcr:mixinTypes="[rep:AccessControllable]"
-    jcr:primaryType="cq:Page">
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+          jcr:mixinTypes="[rep:AccessControllable]"
+          jcr:primaryType="cq:Page">
     <wcm jcr:primaryType="nt:unstructured">
         <foundation jcr:primaryType="nt:unstructured">
             <components jcr:primaryType="nt:unstructured">
                 <responsivegrid jcr:primaryType="nt:unstructured">
                     <layout-wcm-default
-                        jcr:description="Policy for editable layout containers"
-                        jcr:primaryType="nt:unstructured"
-                        jcr:title="Layout Wcm Default"
-                        sling:resourceType="wcm/core/components/policy/policy"
-                        components="[group:Layout Wcm,/libs/wcm/foundation/components/responsivegrid,/libs/cq/experience-fragments/editor/components/experiencefragment,/libs/dam/cfm/components/contentfragment]"
-                        policyResourceType="wcm/foundation/components/responsivegrid">
+                            jcr:description="Policy for editable layout containers"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Layout Wcm Default"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="[group:Layout Wcm,/libs/wcm/foundation/components/responsivegrid,/libs/cq/experience-fragments/editor/components/experiencefragment,/libs/dam/cfm/components/contentfragment]"
+                            policyResourceType="wcm/foundation/components/responsivegrid">
                         <cq:authoring jcr:primaryType="nt:unstructured">
                             <assetToComponentMapping jcr:primaryType="nt:unstructured">
                                 <product
-                                    jcr:primaryType="nt:unstructured"
-                                    assetGroup="product"
-                                    droptarget="product-data-reference"
-                                    resourceType="commerce/components/product"
-                                    type="Products"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        assetGroup="product"
+                                        droptarget="product-data-reference"
+                                        resourceType="commerce/components/product"
+                                        type="Products"/>
                                 <flash
-                                    jcr:primaryType="nt:unstructured"
-                                    assetGroup="media"
-                                    assetMimetype="application/x-shockwave-flash"
-                                    droptarget="flash"
-                                    resourceType="foundation/components/flash"
-                                    type="Images"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        assetGroup="media"
+                                        assetMimetype="application/x-shockwave-flash"
+                                        droptarget="flash"
+                                        resourceType="foundation/components/flash"
+                                        type="Images"/>
                                 <document
-                                    jcr:primaryType="nt:unstructured"
-                                    assetGroup="media"
-                                    assetMimetype="[application/vnd.openxmlformats,application/msword,application/vnd.ms-powerpoint,application/mspowerpoint,application/powerpoint,application/x-mspowerpoint,application/x-msexcel,application/x-excel,application/excel,application/vnd.ms-excel,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document]"
-                                    droptarget="file"
-                                    resourceType="foundation/components/download"
-                                    type="Images"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        assetGroup="media"
+                                        assetMimetype="[application/vnd.openxmlformats,application/msword,application/vnd.ms-powerpoint,application/mspowerpoint,application/powerpoint,application/x-mspowerpoint,application/x-msexcel,application/x-excel,application/excel,application/vnd.ms-excel,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document]"
+                                        droptarget="file"
+                                        resourceType="foundation/components/download"
+                                        type="Images"/>
                                 <video
-                                    jcr:primaryType="nt:unstructured"
-                                    assetGroup="media"
-                                    assetMimetype="video/*"
-                                    droptarget="video"
-                                    resourceType="foundation/components/video"
-                                    type="Images"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        assetGroup="media"
+                                        assetMimetype="video/*"
+                                        droptarget="video"
+                                        resourceType="foundation/components/video"
+                                        type="Images"/>
                                 <fragment
-                                    jcr:primaryType="nt:unstructured"
-                                    assetGroup="media"
-                                    assetMimetype="text/html"
-                                    droptarget="fragment"
-                                    resourceType="dam/cfm/components/contentfragment"
-                                    type="Content Fragment"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        assetGroup="media"
+                                        assetMimetype="text/html"
+                                        droptarget="fragment"
+                                        resourceType="dam/cfm/components/contentfragment"
+                                        type="Content Fragment"/>
                                 <experiencefragment
-                                    jcr:primaryType="nt:unstructured"
-                                    assetGroup="content"
-                                    assetMimetype="text/html"
-                                    droptarget="experiencefragment"
-                                    resourceType="cq/experience-fragments/editor/components/experiencefragment"
-                                    type="experiencefragment"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        assetGroup="content"
+                                        assetMimetype="text/html"
+                                        droptarget="experiencefragment"
+                                        resourceType="cq/experience-fragments/editor/components/experiencefragment"
+                                        type="experiencefragment"/>
                             </assetToComponentMapping>
                         </cq:authoring>
                         <jcr:content
-                            jcr:primaryType="nt:unstructured"
-                            mergeList="{Boolean}true"/>
+                                jcr:primaryType="nt:unstructured"
+                                mergeList="{Boolean}true"/>
                     </layout-wcm-default>
                     <layout-wcm-structure
-                        jcr:description="Policy for templates to allow structure components"
-                        jcr:primaryType="nt:unstructured"
-                        jcr:title="Layout Wcm Structure"
-                        sling:resourceType="wcm/core/components/policy/policy"
-                        components="[/libs/wcm/foundation/components/responsivegrid,group:Layout Wcm,/libs/cq/experience-fragments/editor/components/experiencefragment,/libs/dam/cfm/components/contentfragment]"
-                        policyResourceType="wcm/foundation/components/responsivegrid">
+                            jcr:description="Policy for templates to allow structure components"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Layout Wcm Structure"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="[/libs/wcm/foundation/components/responsivegrid,group:Layout Wcm,/libs/cq/experience-fragments/editor/components/experiencefragment,/libs/dam/cfm/components/contentfragment]"
+                            policyResourceType="wcm/foundation/components/responsivegrid">
                         <cq:authoring jcr:primaryType="nt:unstructured">
                             <assetToComponentMapping jcr:primaryType="nt:unstructured">
                                 <product
-                                    jcr:primaryType="nt:unstructured"
-                                    assetGroup="product"
-                                    droptarget="product-data-reference"
-                                    resourceType="commerce/components/product"
-                                    type="Products"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        assetGroup="product"
+                                        droptarget="product-data-reference"
+                                        resourceType="commerce/components/product"
+                                        type="Products"/>
                                 <flash
-                                    jcr:primaryType="nt:unstructured"
-                                    assetGroup="media"
-                                    assetMimetype="application/x-shockwave-flash"
-                                    droptarget="flash"
-                                    resourceType="foundation/components/flash"
-                                    type="Images"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        assetGroup="media"
+                                        assetMimetype="application/x-shockwave-flash"
+                                        droptarget="flash"
+                                        resourceType="foundation/components/flash"
+                                        type="Images"/>
                                 <document
-                                    jcr:primaryType="nt:unstructured"
-                                    assetGroup="media"
-                                    assetMimetype="[application/vnd.openxmlformats,application/msword,application/vnd.ms-powerpoint,application/mspowerpoint,application/powerpoint,application/x-mspowerpoint,application/x-msexcel,application/x-excel,application/excel,application/vnd.ms-excel,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document]"
-                                    droptarget="file"
-                                    resourceType="foundation/components/download"
-                                    type="Images"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        assetGroup="media"
+                                        assetMimetype="[application/vnd.openxmlformats,application/msword,application/vnd.ms-powerpoint,application/mspowerpoint,application/powerpoint,application/x-mspowerpoint,application/x-msexcel,application/x-excel,application/excel,application/vnd.ms-excel,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document]"
+                                        droptarget="file"
+                                        resourceType="foundation/components/download"
+                                        type="Images"/>
                                 <video
-                                    jcr:primaryType="nt:unstructured"
-                                    assetGroup="media"
-                                    assetMimetype="video/*"
-                                    droptarget="video"
-                                    resourceType="foundation/components/video"
-                                    type="Images"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        assetGroup="media"
+                                        assetMimetype="video/*"
+                                        droptarget="video"
+                                        resourceType="foundation/components/video"
+                                        type="Images"/>
                                 <fragment
-                                    jcr:primaryType="nt:unstructured"
-                                    assetGroup="media"
-                                    assetMimetype="text/html"
-                                    droptarget="fragment"
-                                    resourceType="dam/cfm/components/contentfragment"
-                                    type="Content Fragment"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        assetGroup="media"
+                                        assetMimetype="text/html"
+                                        droptarget="fragment"
+                                        resourceType="dam/cfm/components/contentfragment"
+                                        type="Content Fragment"/>
                                 <experiencefragment
-                                    jcr:primaryType="nt:unstructured"
-                                    assetGroup="content"
-                                    assetMimetype="text/html"
-                                    droptarget="experiencefragment"
-                                    resourceType="cq/experience-fragments/editor/components/experiencefragment"
-                                    type="experiencefragment"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        assetGroup="content"
+                                        assetMimetype="text/html"
+                                        droptarget="experiencefragment"
+                                        resourceType="cq/experience-fragments/editor/components/experiencefragment"
+                                        type="experiencefragment"/>
                             </assetToComponentMapping>
                         </cq:authoring>
                         <jcr:content
-                            jcr:primaryType="nt:unstructured"
-                            mergeList="{Boolean}true"/>
+                                cq:lastReplicated="{Date}2019-01-20T20:17:34.887+01:00"
+                                cq:lastReplicatedBy="admin"
+                                cq:lastReplicationAction="Activate"
+                                jcr:mixinTypes="[cq:ReplicationStatus]"
+                                jcr:primaryType="nt:unstructured"
+                                mergeList="{Boolean}true"/>
                     </layout-wcm-structure>
                     <layout-wcm-content
-                        jcr:primaryType="nt:unstructured"
-                        jcr:title="Layout Wcm Content"
-                        sling:resourceType="wcm/core/components/policy/policy"
-                        components="[/libs/dam/cfm/components/contentfragment,/libs/cq/experience-fragments/editor/components/experiencefragment,/libs/wcm/foundation/components/responsivegrid,group:Layout Wcm]">
-                        <jcr:content
+                            jcr:lastModified="{Date}2019-01-20T20:16:12.068+01:00"
+                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
-                            mergeList="{Boolean}true"/>
+                            jcr:title="Layout Wcm Content"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="[/libs/dam/cfm/components/contentfragment,/libs/cq/experience-fragments/editor/components/experiencefragment,/apps/acs-commons/components/content/generic-text,/apps/acs-commons/components/content/generic-text-image,/libs/wcm/foundation/components/responsivegrid]">
+                        <jcr:content
+                                cq:lastReplicated="{Date}2019-01-20T20:17:34.887+01:00"
+                                cq:lastReplicatedBy="admin"
+                                cq:lastReplicationAction="Activate"
+                                jcr:mixinTypes="[cq:ReplicationStatus]"
+                                jcr:primaryType="nt:unstructured"
+                                mergeList="{Boolean}true"/>
                         <cq:authoring jcr:primaryType="nt:unstructured">
                             <assetToComponentMapping jcr:primaryType="nt:unstructured">
                                 <mapping_content-fragment
-                                    jcr:primaryType="nt:unstructured"
-                                    assetGroup="media"
-                                    assetMimetype="text/html"
-                                    droptarget="fragment"
-                                    resourceType="dam/cfm/components/contentfragment"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        assetGroup="media"
+                                        assetMimetype="text/html"
+                                        droptarget="fragment"
+                                        resourceType="dam/cfm/components/contentfragment"/>
                                 <mapping_experience-fragment
-                                    jcr:primaryType="nt:unstructured"
-                                    assetGroup="content"
-                                    assetMimetype="text/html"
-                                    droptarget="experiencefragment"
-                                    resourceType="cq/experience-fragments/editor/components/experiencefragment"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        assetGroup="content"
+                                        assetMimetype="text/html"
+                                        droptarget="experiencefragment"
+                                        resourceType="cq/experience-fragments/editor/components/experiencefragment"/>
                             </assetToComponentMapping>
                         </cq:authoring>
                     </layout-wcm-content>
