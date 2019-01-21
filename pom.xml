@@ -506,6 +506,7 @@
 				<groupId>com.adobe.acs</groupId>
 				<artifactId>acs-aem-commons-bundle</artifactId>
 				<version>3.18.2</version>
+				<scope>provided</scope>
 			</dependency>
 
 			<!-- Testing -->
