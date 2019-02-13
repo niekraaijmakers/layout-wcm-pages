@@ -1,4 +1,22 @@
-Intro: https://youtu.be/hPwjEDE1Oks
+# Video walkthroughs (click to view video):
+
+## Introduction / benefits / comparison:
+
+<a href="https://www.youtube.com/watch?v=hPwjEDE1Oks" target="_blank"><img src="https://img.youtube.com/vi/hPwjEDE1Oks/0.jpg" alt="Introduction Video"/></a>
+
+## Developer walkthrough - basic
+
+<a href="IRQacpaZ6GY" target="_blank"><img src="https://img.youtube.com/vi/IRQacpaZ6GY/0.jpg" alt="Basic Developer walkthrough"/></a>
+
+## Developer walkthrough - advanced
+
+<a href="https://www.youtube.com/watch?v=_F2qyZiXnZo" target="_blank"><img src="https://img.youtube.com/vi/_F2qyZiXnZo/0.jpg" alt="Advanced developer walkthrough"/></a>
+
+## Author + dispatcher demo
+
+<a href="https://www.youtube.com/watch?v=H41ZFSEW0DM" target="_blank"><img src="https://img.youtube.com/vi/H41ZFSEW0DM/0.jpg" alt="Author and Dispatcher demo"/></a>
+
+(sorry, the outro is cut off at the end, recording problems.)
 
 # wcm-layout-pages
 Render header and footer based on content pages dedicated for this purpose only.
@@ -17,6 +35,10 @@ This makes the solution extremely scale-able.
 Layout items such as menu entries are not tied to the existing content as these are decoupled.
 You can reference any header / footer from anywhere.
 
+### Leverage the template designer
+With the newly released template designer, and a parsys in the header / footer, you can create specific header and footer templates for your authors to use, allowing you to narrow down what can be done in a header or footer without deploying code.
+
+
 ### Flexibility for developers
 Developers can easily create a new menu entry without affecting existing code. Just create a new menu entry template with its own render logic.
 This makes the solution also very scale-able code-wise. The solution is very plug-gable and can be easily extended to fit new requirements.
@@ -33,8 +55,8 @@ For the best performance even for personalized items, and example integration is
 The header is cached by the http cache using osgi configurations for the most part.
 Only some code is required to create the keys (keyfactory).
 Warning: This does presume that the header / footer is resource based, not request based, and that every locale has its own header / footer pages.
-If you have request based elements such as a welcome message showing the user name, these will need to be resolved with either SSI or javascript.
-Alternatively you can use the transformer pipeline as well to resolve placeholders, as this pipeline is applied after the filter chain.
+If you have request based elements such as a welcome message showing the user name, these will need to be resolved with either SSI or javascript. The project demonstrates this using Sling Dynamic Include and SSI.
+Alternatively you can use the transformer pipeline as well to resolve placeholders, as this pipeline is applied after the filter chain if that is required.
 
 
 ## Drawbacks
@@ -43,7 +65,9 @@ Once established however, this solution is perfect to distribute complexity in a
 The learning curve is still steep, however.
 For smaller environments with little complexity this might not be a good solution.
 
-Also, caching and stale content is something to be mindful off with this solution.
+Also, caching and stale content is something to be mindful of with this solution.
+
+However by providing a good starting example, this should help you out to mitigate this.
 
 ### AEM compatibility
 The package is designed for AEM 6.3 and later.
