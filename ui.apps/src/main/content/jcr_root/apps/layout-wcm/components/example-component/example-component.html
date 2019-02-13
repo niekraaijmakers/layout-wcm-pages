@@ -1,3 +1,6 @@
-<sly data-sly-use.component="com.adobe.examples.layoutwcm.core.examplecomponent.ExpensiveComponent"/>
-
-<img src="${component.url}"/>
+<sly data-sly-test="${properties.path != null && properties.path != ''}">
+    <sly data-sly-resource="${properties.path @ addSelectors=['content'], wcmmode='disabled', resourceType='layout-wcm/components/expensive-component' }" />
+</sly>
+<sly data-sly-test="${properties.path == null || properties.path == ''}">
+    No path configured!
+</sly>
