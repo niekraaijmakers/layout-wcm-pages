@@ -6,7 +6,7 @@
           httpcache.config.filter.scope="INCLUDE"
           httpcache.config.requesturi.patterns="[.*]"
           httpcache.config.request.authentication="both"
-          cacheConfigExtension.target="(&amp;(service.factoryPid=com.adobe.acs.commons.httpcache.config.impl.ResourceTypeHttpCacheConfigExtension)(configName=expensivecomp))"
-          cacheKeyFactory.target="(&amp;(service.factoryPid=com.adobe.acs.commons.httpcache.config.impl.ResourceTypeHttpCacheConfigExtension)(configName=expensivecomp))"
+          cacheConfigExtension.target="(&amp;(service.factoryPid=com.adobe.examples.layoutwcm.core.httpcache.MyCustomResourceExtension)(configName=expensivecomp))"
+          cacheKeyFactory.target="(&amp;(service.factoryPid=com.adobe.examples.layoutwcm.core.httpcache.MyCustomResourceExtension)(configName=expensivecomp))"
 />
 
