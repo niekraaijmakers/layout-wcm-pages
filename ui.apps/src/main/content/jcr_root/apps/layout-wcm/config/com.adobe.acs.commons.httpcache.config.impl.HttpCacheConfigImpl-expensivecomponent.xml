@@ -3,7 +3,7 @@
           xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
           jcr:primaryType="sling:OsgiConfig"
           httpcache.config.order="950"
-          httpcache.config.filter.scope="INCLUDE"
+          httpcache.config.filter-scope="INCLUDE"
           httpcache.config.requesturi.patterns="[.*]"
           httpcache.config.request.authentication="both"
           cacheConfigExtension.target="(&amp;(service.factoryPid=com.adobe.examples.layoutwcm.core.httpcache.MyCustomResourceConfigExtension)(configName=expensivecomp))"
