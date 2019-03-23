@@ -67,7 +67,11 @@ public class ParameterUtil {
      *
      * @param value     must be in the format => {@code x<separator>y}  ... ex. {@code foo:bar}
      * @param separator separator between the values
-     * @param isValueOptional if {@code false} returns {@code null} in case there is not at least one separator found (not at the last position) 
+<<<<<<< Updated upstream
+     * @param isValueOptional if {@code false} returns {@code null} in case there is not at least one separator found (not at the last position)
+=======
+     * @param isValueOptional if {@code false} returns {@code null} in case there is not at least one separator found (not at the last position)
+>>>>>>> Stashed changes
      * @return Returns a SimpleEntry representing the key/value pair. The value may be {@null} in case no separator is found and {@code isValueOptional} is {@code true}.
      */
     private static AbstractMap.SimpleEntry<String, String> toSimpleEntry(final String value, final String separator, boolean isValueOptional) {

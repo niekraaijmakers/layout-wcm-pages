@@ -4,7 +4,7 @@
           jcr:primaryType="sling:OsgiConfig"
           configName="expensivecomp"
           httpcache.config.extension.resourcetypes.allowed="[layout-wcm/components/expensive-component]"
-          httpcache.config.extension.selectors.allowed="[content,someotherselector]"
           httpcache.config.extension.paths.allowed="[/content/layout-wcm/(.*)]"
+          httpcache.config.extension.selectors.allowed="[content]"
 />
 
