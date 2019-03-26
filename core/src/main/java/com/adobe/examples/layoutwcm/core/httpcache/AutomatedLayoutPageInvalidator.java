@@ -76,7 +76,6 @@ public class AutomatedLayoutPageInvalidator implements ResourceChangeListener {
     
     @Reference
     private JobManager jobManager;
-    
     @Override
     public void onChange(List<ResourceChange> changes) {
         for (ResourceChange change : changes) {
