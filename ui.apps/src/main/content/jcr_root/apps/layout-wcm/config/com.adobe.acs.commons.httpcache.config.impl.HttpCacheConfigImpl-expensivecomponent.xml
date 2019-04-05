@@ -7,7 +7,7 @@
           httpcache.config.requesturi.patterns="[.*]"
           httpcache.config.request.authentication="both"
           httpcache.config.invalidation.oak.paths="[/content/layout-wcm/(.*)/expensive_component(.*)]"
-          cacheConfigExtension.target="(&amp;(service.factoryPid=com.adobe.examples.layoutwcm.core.httpcache.MyCustomResourceConfigExtension)(configName=expensivecomp))"
-          cacheKeyFactory.target="(&amp;(service.factoryPid=com.adobe.examples.layoutwcm.core.httpcache.MyCustomResourceConfigExtension)(configName=expensivecomp))"
+          cacheConfigExtension.target="(&amp;(service.factoryPid=com.adobe.acs.commons.httpcache.config.impl.CombinedCacheConfigExtension)(config.name=expensiveComp))"
+          cacheKeyFactory.target="(&amp;(service.factoryPid=com.adobe.acs.commons.httpcache.config.impl.CombinedCacheKeyFactory)(config.name=expensiveComp))"
 />
 

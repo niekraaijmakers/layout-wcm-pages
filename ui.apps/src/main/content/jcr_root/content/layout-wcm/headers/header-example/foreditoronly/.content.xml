@@ -6,7 +6,7 @@
         cq:template="/apps/layout-wcm/templates/layout-pages/header-menu-mainentry-page"
         jcr:primaryType="cq:PageContent"
         jcr:title="For Editors only"
-        showForUserGroupsOnly="[editors]"
+        showForUserGroupsOnly="[CORPORATE]"
         sling:resourceType="layout-wcm/components/structure/page/layout/headerpage/menupage-mainentry"
         menuPageTargetPath="/content/layout-wcm"/>
 </jcr:root>

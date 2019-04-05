@@ -6,8 +6,8 @@
           httpcache.config.filter-scope="REQUEST"
           httpcache.config.requesturi.patterns="[.*]"
           httpcache.config.request.authentication="both"
-          httpcache.config.invalidation.oak.paths="[/content/layout-wcm/(headers|footers)(/.*)/jcr:content.content.html]"
-          cacheConfigExtension.target="(&amp;(service.factoryPid=com.adobe.examples.layoutwcm.core.httpcache.HeaderPageCacheExtension)(configName=layout))"
-          cacheKeyFactory.target="(&amp;(service.factoryPid=com.adobe.examples.layoutwcm.core.httpcache.HeaderPageCacheExtension)(configName=layout))"
+          httpcache.config.invalidation.oak.paths="[/content/layout-wcm/(headers|footers)(/.*)]"
+          cacheConfigExtension.target="(&amp;(service.factoryPid=com.adobe.acs.commons.httpcache.config.impl.CombinedCacheConfigExtension)(config.name=layout))"
+          cacheKeyFactory.target="(&amp;(service.factoryPid=com.adobe.acs.commons.httpcache.config.impl.CombinedCacheKeyFactory)(config.name=layout))"
 />
 

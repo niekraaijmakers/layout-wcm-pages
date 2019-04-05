@@ -1,21 +1,20 @@
 package com.adobe.examples.layoutwcm.core.personalizedheader;
 
+import com.adobe.examples.layoutwcm.core.user.User;
+import com.adobe.examples.layoutwcm.core.user.UserGroup;
+import com.adobe.examples.layoutwcm.core.user.UserService;
 import com.day.cq.wcm.api.Page;
-import com.google.common.collect.ImmutableSet;
-import org.apache.commons.lang3.ArrayUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 import org.apache.sling.models.annotations.injectorspecific.RequestAttribute;
 import org.apache.sling.models.annotations.injectorspecific.Self;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.annotation.PostConstruct;
-import javax.servlet.http.Cookie;
-import java.util.Set;
-
-import static com.adobe.examples.layoutwcm.core.personalizedheader.Contants.USER_GROUP;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Model(adaptables = SlingHttpServletRequest.class)
@@ -30,35 +29,29 @@ public class MenuEntryFilter {
 
     @RequestAttribute
     private Page menuEntryPage;
+    
+    @OSGiService
+    private UserService userService;
 
     @PostConstruct
     public void init(){
 
-        @Nullable String[] showForUserGroupsArray = getShowForUserGroupOnlyArray();
-
+        List<UserGroup> userGroups = getShowForUserGroupsOnly();
+        
         //only if the menuitem has show user groups defined, proceed with the filter
-        if(!ArrayUtils.isEmpty(showForUserGroupsArray)){
-            String userGroup = getUserGroup();
-            Set<String> showForUserGroups = ImmutableSet.copyOf(showForUserGroupsArray);
-            filtered = !showForUserGroups.contains(userGroup);
+        if(!userGroups.isEmpty()){
+            User user = userService.getUser(request);
+            filtered = userGroups.contains(user.getGroup());
         }
 
     }
 
-    private String[] getShowForUserGroupOnlyArray() {
+    private List<UserGroup> getShowForUserGroupsOnly() {
         ValueMap properties = menuEntryPage.getContentResource().getValueMap();
-        return properties.get(PN_SHOW_FOR_USER_GROUPS, String[].class);
+        String[] userGroupsString = properties.get(PN_SHOW_FOR_USER_GROUPS, new String[]{});
+        return Arrays.stream(userGroupsString).map(UserGroup::valueOf).collect(Collectors.toList());
     }
 
-    private @Nonnull String getUserGroup(){
-        @Nullable Cookie userGroupCookie = request.getCookie(USER_GROUP);
-
-        if(userGroupCookie == null){
-            return "anonymous";
-        }else{
-            return userGroupCookie.getValue();
-        }
-    }
 
     public boolean isFiltered() {
         return filtered;

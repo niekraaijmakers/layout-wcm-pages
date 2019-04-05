@@ -1,0 +1,2 @@
+
+print slingRequest.getResource().getPath()

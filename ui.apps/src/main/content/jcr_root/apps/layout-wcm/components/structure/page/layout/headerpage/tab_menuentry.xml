@@ -40,21 +40,28 @@
                                     <select
                                             jcr:primaryType="nt:unstructured"
                                             text="Select User Group"/>
-                                    <administrators
+                                    <anonymous
                                             jcr:primaryType="nt:unstructured"
-                                            text="Administrators"
-                                            value="administrators"/>
-                                    <editors
+                                            text="Anonymous"
+                                            value="ANONYMOUS"/>
+                                    <corporate
                                             jcr:primaryType="nt:unstructured"
-                                            text="Editors"
-                                            value="editors"/>
+                                            text="Corporate"
+                                            value="CORPORATE"/>
+                                    <customer
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Customer"
+                                            value="CUSTOMER"/>
+                                    <coolkids
+                                            jcr:primaryType="nt:unstructured"
+                                            text="CoolKids"
+                                            value="COOLKIDS"/>
+                                    
                                 </items>
                             </field>
                         </allowedtemplates>
                     </items>
                 </templates>
-
-
             </items>
         </column>
     </items>

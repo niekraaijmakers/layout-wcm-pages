@@ -421,7 +421,7 @@
 			<dependency>
 				<groupId>com.adobe.aem</groupId>
 				<artifactId>uber-jar</artifactId>
-				<version>6.3.0</version>
+				<version>6.3.3.2</version>
 				<classifier>apis</classifier>
 				<scope>provided</scope>
 			</dependency>
@@ -495,17 +495,11 @@
 				<scope>provided</scope>
 			</dependency>
 			<!-- Core Components -->
-			<dependency>
-				<groupId>com.adobe.cq</groupId>
-				<artifactId>core.wcm.components.core</artifactId>
-				<version>1.1.0</version>
-				<scope>provided</scope>
-			</dependency>
 
 			<dependency>
 				<groupId>com.adobe.acs</groupId>
 				<artifactId>acs-aem-commons-bundle</artifactId>
-				<version>3.18.2</version>
+				<version>4.0.1-SNAPSHOT</version>
 				<scope>provided</scope>
 			</dependency>
 
@@ -534,6 +528,17 @@
 				<version>1.4</version>
 				<scope>test</scope>
 			</dependency>
+			<dependency>
+				<groupId>com.adobe.cq</groupId>
+				<artifactId>core.wcm.components.all</artifactId>
+				<version>2.2.0</version>
+			</dependency>
+			<dependency>
+				<groupId>com.adobe.cq</groupId>
+				<artifactId>core.wcm.components.core</artifactId>
+				<version>2.2.0</version>
+			</dependency>
+			
 		</dependencies>
 	</dependencyManagement>
 

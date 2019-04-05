@@ -20,13 +20,6 @@ package com.adobe.examples.layoutwcm.core.httpcache;
  * #L%
  */
 
-import com.adobe.acs.commons.httpcache.engine.HttpCacheEngine;
-import com.adobe.acs.commons.httpcache.exception.HttpCacheKeyCreationException;
-import com.adobe.acs.commons.httpcache.exception.HttpCachePersistenceException;
-import com.adobe.acs.commons.httpcache.invalidator.CacheInvalidationJobConstants;
-import com.adobe.examples.layoutwcm.core.httpcache.key.CookieKeyValueMapBuilder;
-import com.day.cq.commons.jcr.JcrConstants;
-import com.google.common.collect.ImmutableSet;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.observation.ResourceChange;
 import org.apache.sling.api.resource.observation.ResourceChangeListener;
@@ -37,18 +30,12 @@ import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static com.adobe.acs.commons.httpcache.invalidator.CacheInvalidationJobConstants.PAYLOAD_KEY_DATA_CHANGE_PATH;
 import static com.adobe.acs.commons.httpcache.invalidator.CacheInvalidationJobConstants.TOPIC_HTTP_CACHE_INVALIDATION_JOB;
-import static com.adobe.examples.layoutwcm.core.personalizedheader.Contants.USER_GROUP;
-import static com.adobe.examples.layoutwcm.core.personalizedheader.Contants.USER_GROUPS;
 import static java.util.Collections.singletonMap;
 
 /**
