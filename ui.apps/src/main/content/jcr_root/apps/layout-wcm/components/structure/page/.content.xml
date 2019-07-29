@@ -3,5 +3,6 @@
     jcr:description="Page component for Adobe Examples specific header and footer libs"
     jcr:primaryType="cq:Component"
     jcr:title="Adobe Examples Page"
-    sling:resourceSuperType="core/wcm/components/page/v1/page"
+    sling:resourceSuperType="core/wcm/components/page/v2/page"
+    designDialogPath="core/wcm/components/page/v2/page/cq:design_dialog"
     componentGroup=".hidden"/>

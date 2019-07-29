@@ -158,4 +158,22 @@
             </components>
         </foundation>
     </wcm>
+    <layout-wcm jcr:primaryType="nt:unstructured">
+        <components jcr:primaryType="nt:unstructured">
+            <structure jcr:primaryType="nt:unstructured">
+                <page jcr:primaryType="nt:unstructured">
+                    <policy_212634895490169
+                            jcr:lastModified="{Date}2019-02-14T14:27:11.516+01:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Layout WCM - Page"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            appResourcesClientlib="layout-wcm.site"
+                            clientlibs="layout-wcm.base">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_212634895490169>
+                </page>
+            </structure>
+        </components>
+    </layout-wcm>
 </jcr:root>
