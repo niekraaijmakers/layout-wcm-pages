@@ -3,6 +3,7 @@
 </sly>
 
 <div class="container">
+    <h3>Load time: <span class="loadtime"></span></h3>
     <sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer"
          data-sly-repeat.child="${templatedContainer.structureResources}"
          data-sly-resource="${child.path @ resourceType=child.resourceType, decorationTagName='div'}"/>
@@ -12,3 +13,22 @@
 <sly data-sly-test="${inheritedPageProperties.footerPagePath != null && inheritedPageProperties.footerPagePath != ''}">
     <sly data-sly-resource="${inheritedPageProperties.footerPagePath @ addSelectors=['content'],wcmmode='disabled',appendPath='jcr:content', resourceType='layout-wcm/components/structure/page/layout/footerpage'  }" />
 </sly>
+
+<script type="text/javascript">
+
+    function print_nav_timing_data() {
+        // Use getEntriesByType() to just get the "navigation" events
+        var perfEntries = performance.getEntriesByType("navigation");
+
+        for (var i=0; i < perfEntries.length; i++) {
+            console.log("= Navigation entry[" + i + "]");
+            var p = perfEntries[i];
+            return p.domInteractive;
+        }
+    }
+    
+    $(document).ready(function(){
+        var timeInMs = print_nav_timing_data();
+        $(".loadtime").text(timeInMs +'ms');
+    });
+</script>
