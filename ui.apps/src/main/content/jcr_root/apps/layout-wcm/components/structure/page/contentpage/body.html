@@ -2,6 +2,10 @@
     <sly data-sly-resource="${inheritedPageProperties.headerPagePath @ addSelectors=['content'],wcmmode='disabled',appendPath='jcr:content', resourceType='layout-wcm/components/structure/page/layout/headerpage' }" />
 </sly>
 
+<sly data-sly-test="${inheritedPageProperties.headerPagePath != null && inheritedPageProperties.headerPagePath != ''}">
+    <sly data-sly-resource="${inheritedPageProperties.headerPagePath @ addSelectors=['flyout-content'],wcmmode='disabled',appendPath='jcr:content', resourceType='layout-wcm/components/structure/page/layout/headerpage' }" />
+</sly>
+
 <div class="container">
     <sly data-sly-include="content.html"/>
 </div>

@@ -3,5 +3,5 @@
     jcr:description="Represents a main menu entry in the header menu."
     jcr:primaryType="cq:Component"
     jcr:title="Adobe Examples - Layout Pages Example - Header Menu - Main Entry Page"
-    sling:resourceSuperType="layout-wcm/components/structure/page/layout/headerpage/menupage-entry"
+    sling:resourceSuperType="layout-wcm/components/structure/page/layout/headerpage"
     componentGroup=".hidden"/>

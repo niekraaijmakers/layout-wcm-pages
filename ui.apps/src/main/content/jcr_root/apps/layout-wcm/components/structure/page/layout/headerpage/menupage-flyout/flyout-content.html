@@ -1,0 +1,11 @@
+<div class="nav-flyout" data-flyout-path="${resourcePage.path}">
+
+    <div class="container">
+        <h2>Flyout: ${properties['jcr:title']}</h2>
+    
+        <div class="entries">
+            <sly data-sly-use.includeFlyoutEntries="include-flyout-entries.html" data-sly-call="${includeFlyoutEntries.includeChildEntries @ resourcePage=resourcePage}"/>
+        </div>
+    </div>
+    
+</div>

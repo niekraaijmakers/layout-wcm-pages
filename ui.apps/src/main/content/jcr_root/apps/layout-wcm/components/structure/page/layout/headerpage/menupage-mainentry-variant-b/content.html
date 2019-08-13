@@ -1,12 +1,12 @@
-<div class="main-entry main-entry-variant-b">
+<li class="cmp-navigation__item cmp-navigation__item--level-${resourcePage.depth}">
+
+        <a href="${properties.menuPageTargetPath}">
+            ${properties['jcr:title']}
+        </a>
     
-    <a href="${properties.menuPageTargetPath}">
-        ${properties['jcr:title']}
-    </a>
+        <div class="subentries">
+            Sling magic! I render differently!
+            <sly data-sly-use.includeMenuEntries="include-menupage-entries.html" data-sly-call="${includeMenuEntries.includeChildEntries @ resourcePage=resourcePage}"/>
+        </div>
 
-    <div class="subentries">
-        Sling magic! I render differently!
-        <sly data-sly-use.includeMenuEntries="include-menupage-entries.html" data-sly-call="${includeMenuEntries.includeChildEntries @ resourcePage=resourcePage}"/>
-    </div>
-
-</div>
+</li>

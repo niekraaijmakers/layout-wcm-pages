@@ -1,0 +1,11 @@
+<template data-sly-template.includeChildEntries="${'com.day.cq.wcm.api.Page' @ resourcePage}">
+    
+    <sly data-sly-list.childEntry="${resourcePage.listChildren}">
+        <sly data-sly-use.filter="${'com.adobe.examples.layoutwcm.core.personalizedheader.MenuEntryFilter' @ menuEntryPage = childEntry}">
+            <sly    data-sly-test="${filter.passingFilter}"
+                    data-sly-resource="${childEntry.path @ addSelectors=['flyout-content'], appendPath='jcr:content', resourceType=childEntry.properties['sling:resourceType']}"></sly>
+        </sly>
+
+    </sly>
+
+</template>

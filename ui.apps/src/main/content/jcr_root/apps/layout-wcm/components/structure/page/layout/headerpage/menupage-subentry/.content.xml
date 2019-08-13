@@ -3,5 +3,5 @@
     jcr:description="Represents a sub menu entry in the header menu."
     jcr:primaryType="cq:Component"
     jcr:title="Adobe Examples - Layout Pages Example - Header Menu - Sub Entry Page"
-    sling:resourceSuperType="layout-wcm/components/structure/page/layout/headerpage"
+    sling:resourceSuperType="layout-wcm/components/structure/page/layout/headerpage/menupage-entry"
     componentGroup=".hidden"/>
