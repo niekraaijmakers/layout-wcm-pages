@@ -16,11 +16,19 @@
             <responsivegrid
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
+                <example_component
+                        jcr:created="{Date}2019-03-23T09:00:13.592+01:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2019-03-23T09:02:28.145+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="layout-wcm/components/example-component"
+                        path="/content/layout-wcm/expensive-component-container/jcr:content/root/responsivegrid/expensive_component"/>
                 <generic_text_image
                     jcr:created="{Date}2019-01-20T20:16:29.857+01:00"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="acs-commons/components/content/generic-text-image"
-                    text="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus ante non neque fermentum tincidunt. Donec commodo dui in massa tincidunt hendrerit. Proin tristique neque vitae justo laoreet dignissim. Pellentesque diam nisi, consectetur eu convallis id, rhoncus vel nisl. Aliquam molestie venenatis interdum. Integer quis suscipit magna, eget dictum libero. Donec iaculis nisl erat, eget bibendum risus consequat eget. Maecenas non nulla ipsum. Sed imperdiet tellus eu dignissim porttitor. Nulla nunc risus, dapibus sed felis vel, facilisis imperdiet risus. Nullam nec orci at magna accumsan bibendum. Sed id libero varius, pretium lacus eu, condimentum orci. Donec finibus ullamcorper est, ut convallis sem vestibulum eget.&lt;/p>&#xa;&lt;p>Some footer content.&lt;/p>&#xa;"
+                    text="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus ante non neque fermentum tincidunt. Donec commodo dui in massa tincidunt hendrerit. Proin tristique neque vitae justo laoreet dignissim. Pellentesque diam nisi, consectetur eu convallis id, rhoncus vel nisl. Aliquam molestie venenatis interdum. Integer quis suscipit magna, eget dictum libero. Donec iaculis nisl erat, eget bibendum risus consequat eget. Maecenas non nulla ipsum. Sed imperdiet tellus eu dignissim porttitor. Nulla nunc risus, dapibus sed felis vel, facilisis imperdiet risus. Nullam nec orci at magna accumsan bibendum. Sed id libero varius, pretium lacus eu, condimentum orci. Donec finibus ullamcorper est, ut convallis sem vestibulum eget.&lt;/p>"
                     textIsRich="true">
                     <image
                         jcr:primaryType="nt:unstructured"

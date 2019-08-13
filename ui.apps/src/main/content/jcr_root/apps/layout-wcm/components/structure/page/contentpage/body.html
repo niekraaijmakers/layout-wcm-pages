@@ -3,12 +3,8 @@
 </sly>
 
 <div class="container">
-    <h3>Load time: <span class="loadtime"></span></h3>
-    <sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer"
-         data-sly-repeat.child="${templatedContainer.structureResources}"
-         data-sly-resource="${child.path @ resourceType=child.resourceType, decorationTagName='div'}"/>
+    <sly data-sly-include="content.html"/>
 </div>
-
 
 <sly data-sly-test="${inheritedPageProperties.footerPagePath != null && inheritedPageProperties.footerPagePath != ''}">
     <sly data-sly-resource="${inheritedPageProperties.footerPagePath @ addSelectors=['content'],wcmmode='disabled',appendPath='jcr:content', resourceType='layout-wcm/components/structure/page/layout/footerpage'  }" />
@@ -26,7 +22,7 @@
             return p.domInteractive;
         }
     }
-    
+
     $(document).ready(function(){
         var timeInMs = print_nav_timing_data();
         $(".loadtime").text(Math.round(timeInMs) +'ms');
