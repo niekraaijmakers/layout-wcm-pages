@@ -1,58 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
-          jcr:mixinTypes="[rep:AccessControllable]"
-          jcr:primaryType="cq:Page">
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
     <jcr:content
-            cq:deviceGroups="[/etc/mobile/groups/responsive]"
-            cq:template="/conf/layout-wcm/settings/wcm/templates/content-page"
-            cq:policy="layout-wcm/components/structure/page/policy_212634895490169"
-            jcr:primaryType="cq:PageContent"
-            sling:resourceType="wcm/core/components/policies/mappings">
-        <root
-                jcr:primaryType="nt:unstructured">
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2019-08-13T14:09:15.271+02:00"
+        cq:lastModifiedBy="admin"
+        cq:policy="layout-wcm/components/structure/page/policy_212634895490169"
+        cq:template="/conf/layout-wcm/settings/wcm/templates/content-page"
+        jcr:mixinTypes="[]"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="wcm/core/components/policies/mappings">
+        <root jcr:primaryType="nt:unstructured">
             <responsivegrid
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wcm/foundation/components/responsivegrid"
-                    editable="{Boolean}true">
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"
+                editable="{Boolean}true">
                 <cq:responsive jcr:primaryType="nt:unstructured">
                     <default
-                            jcr:primaryType="nt:unstructured"
-                            width="8"/>
+                        jcr:primaryType="nt:unstructured"
+                        width="8"/>
                     <phone
-                            jcr:primaryType="nt:unstructured"
-                            width="12"/>
+                        jcr:primaryType="nt:unstructured"
+                        width="12"/>
                 </cq:responsive>
             </responsivegrid>
             <responsivegrid_rail
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wcm/foundation/components/responsivegrid"
-                    editable="{Boolean}true">
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"
+                editable="{Boolean}true">
                 <cq:responsive jcr:primaryType="nt:unstructured">
                     <default
-                            jcr:primaryType="nt:unstructured"
-                            width="4"/>
+                        jcr:primaryType="nt:unstructured"
+                        width="4"/>
                     <phone
-                            jcr:primaryType="nt:unstructured"
-                            behavior="hide"/>
+                        jcr:primaryType="nt:unstructured"
+                        behavior="hide"/>
                 </cq:responsive>
             </responsivegrid_rail>
             <responsivegrid_fullwidth
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wcm/foundation/components/responsivegrid"
-                    editable="{Boolean}true">
+                cq:policy="wcm/foundation/components/responsivegrid/layout-wcm-content"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping"
+                editable="{Boolean}true">
                 <cq:responsive jcr:primaryType="nt:unstructured"/>
             </responsivegrid_fullwidth>
         </root>
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">
                 <phone
-                        jcr:primaryType="nt:unstructured"
-                        title="Smaller Screen"
-                        width="{Long}650"/>
+                    jcr:primaryType="nt:unstructured"
+                    title="Smaller Screen"
+                    width="{Long}650"/>
                 <tablet
-                        jcr:primaryType="nt:unstructured"
-                        title="Tablet"
-                        width="{Long}1200"/>
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Long}1200"/>
             </breakpoints>
         </cq:responsive>
     </jcr:content>

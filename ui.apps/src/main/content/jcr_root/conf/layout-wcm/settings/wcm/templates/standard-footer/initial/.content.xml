@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
-          xmlns:jcr="http://www.jcp.org/jcr/1.0"
-          jcr:primaryType="cq:Page">
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
     <jcr:content
-            jcr:primaryType="cq:PageContent"
-            cq:template="/conf/layout-wcm/settings/wcm/templates/footer-page"
-            sling:resourceType="layout-wcm/components/structure/page/layout/footerpage">
-
+        cq:template="/conf/layout-wcm/settings/wcm/templates/footer-page"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="layout-wcm/components/structure/page/layout/footerpage">
+        <root
+            jcr:lastModified="{Date}2019-08-13T14:10:13.715+02:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <generic_text
+                jcr:created="{Date}2019-08-13T14:05:56.136+02:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-08-13T14:06:05.500+02:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="acs-commons/components/content/generic-text"
+                text="&lt;p>Some footer content!&lt;/p>&#xa;"
+                textIsRich="true"/>
+        </root>
     </jcr:content>
 </jcr:root>

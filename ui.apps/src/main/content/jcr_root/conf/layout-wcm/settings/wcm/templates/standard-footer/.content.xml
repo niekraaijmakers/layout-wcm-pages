@@ -2,6 +2,11 @@
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Template">
     <jcr:content
+        cq:lastModified="{Date}2019-08-13T14:08:12.043+02:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2019-08-13T14:08:40.185+02:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
         cq:templateType="/conf/layout-wcm/settings/wcm/template-types/footer-page"
         jcr:description="Page used to demonstrate component use"
         jcr:primaryType="cq:PageContent"

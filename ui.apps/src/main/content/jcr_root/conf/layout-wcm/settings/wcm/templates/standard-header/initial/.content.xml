@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
-          xmlns:jcr="http://www.jcp.org/jcr/1.0"
-          jcr:primaryType="cq:Page">
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
     <jcr:content
-            jcr:primaryType="cq:PageContent"
-            cq:template="/conf/layout-wcm/settings/wcm/templates/header-page"
-            cq:allowedTemplates="[/apps/layout-wcm/templates/layout-pages/header-menu-mainentry-page,/apps/layout-wcm/templates/layout-pages/header-menu-mainentry-variant-b-page]"
-            sling:resourceType="layout-wcm/components/structure/page/layout/headerpage">
-
-    </jcr:content>
+        cq:allowedTemplates="[/apps/layout-wcm/templates/layout-pages/header-menu-mainentry-page,/apps/layout-wcm/templates/layout-pages/header-menu-mainentry-variant-b-page]"
+        cq:template="/conf/layout-wcm/settings/wcm/templates/header-page"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="layout-wcm/components/structure/page/layout/headerpage"/>
 </jcr:root>
