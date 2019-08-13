@@ -1,3 +1,5 @@
+<sly data-sly-use.changeViewComp="${'com.adobe.examples.layoutwcm.core.personalizedheader.ChangeViewComponent'}"></sly>
+
 <script type="text/javascript">
     function changeCookieValue(select){
         var newUserGroup = select.value;
@@ -8,10 +10,8 @@
     }
 </script>
 
-<select id="demo" onchange="changeCookieValue(this)">
-    <option value="">Select to load different view</option>
-    <option value="ANONYMOUS">Anonymous view</option>
-    <option value="CORPORATE">Corporate view</option>
-    <option value="CUSTOMER">Customer view</option>
-    <option value="COOLKIDS">CoolKids view</option>
+
+
+<select id="demo" onchange="changeCookieValue(this)" >
+    <option data-sly-repeat.optionItem="${changeViewComp.cookieViews}" value="${optionItem.value}" selected="${optionItem.selected}">${optionItem.title}</option>
 </select>

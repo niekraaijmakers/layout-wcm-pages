@@ -1,9 +1,17 @@
 <template data-sly-template.includeChildEntries="${'com.day.cq.wcm.api.Page' @ resourcePage}">
-
-    <sly data-sly-list.childEntry="${resourcePage.listChildren}">
-        <sly data-sly-use.filter="${'com.adobe.examples.layoutwcm.core.personalizedheader.MenuEntryFilter' @ menuEntryPage = childEntry}"
-             data-sly-test="${!filter.filtered}"
-             data-sly-resource="${childEntry.path @ addSelectors=['content'], appendPath='jcr:content', resourceType=childEntry.properties['sling:resourceType']}"/>
-    </sly>
+    
+    <ul class="cmp-navigation__group">
+    
+        <sly data-sly-list.childEntry="${resourcePage.listChildren}">
+            <li class="cmp-navigation__item cmp-navigation__item--level-${resourcePage.depth}">
+                <sly
+                         data-sly-use.filter="${'com.adobe.examples.layoutwcm.core.personalizedheader.MenuEntryFilter' @ menuEntryPage = childEntry}"
+                         data-sly-test="${!filter.filtered}"
+                         data-sly-resource="${childEntry.path @ addSelectors=['content'], appendPath='jcr:content', resourceType=childEntry.properties['sling:resourceType']}"></sly>
+            </li>
+            
+        </sly>
+    
+    </ul>
 
 </template>

@@ -1,11 +1,20 @@
+
 <header>
 
-    <div class="Logo">Logo component</div>
-
-    <menu>
-        <sly data-sly-use.includeMenuEntries="include-menupage-entries.html" data-sly-call="${includeMenuEntries.includeChildEntries @ resourcePage=resourcePage}"/>
-    </menu>
-
-    <sly data-sly-include="demo-changeview.html"/>
+    <div class="container">
+        <div class="responsivegrid cmp-examples-structure__main aem-GridColumn aem-GridColumn--default--12">
+            <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 aem-Grid--small--12 aem-Grid--extrasmall--12 ">
+            
+                <div class="logo"></div>
+            
+                <nav class="cmp-navigation" role="navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+                    <sly data-sly-use.includeMenuEntries="include-menupage-entries.html" data-sly-call="${includeMenuEntries.includeChildEntries @ resourcePage=resourcePage}"/>
+                </nav>
+        
+            </div>
+        </div>
+        
+        <sly data-sly-include="demo-changeview.html"/>
+    </div>
 
 </header>
