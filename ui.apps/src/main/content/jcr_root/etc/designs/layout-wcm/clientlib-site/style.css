@@ -17,3 +17,50 @@
 footer{
     background: grey;
 }
+
+.cmp-navigation{
+    float: left;
+    height: 80px;
+    background: rgba(198, 198, 198, 0.36);
+}
+
+.cmp-navigation__item{
+    float: left;
+    margin-left: 10px;
+    
+}
+
+.cmp-navigation__group{
+    list-style: none;
+}
+
+.cmp-navigation__item .subentries{
+    display: none;
+}
+
+.cmp-navigation__item:hover .subentries{
+    display: block;
+}
+
+
+.logo{
+    float: left;
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: url(img/logo.png) no-repeat top;
+    background-size: cover;
+    
+}
+
+.container{
+    
+    width: 800px;
+    margin: 0 auto;
+    
+    
+}
+
+select#demo{
+    margin-bottom: 30px;
+}
