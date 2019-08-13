@@ -3,7 +3,7 @@
           xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
           jcr:primaryType="sling:OsgiConfig"
           config.name="layout"
-          httpcache.config.extension.resource-types.allowed="[/apps/layout-wcm/components/structure/page/layout/headerpage,/apps/layout-wcm/components/structure/page/layout/footerpage]"
+          httpcache.config.extension.resource-types.allowed="[layout-wcm/components/structure/page/layout/headerpage,layout-wcm/components/structure/page/layout/footerpage]"
 />
 
 
