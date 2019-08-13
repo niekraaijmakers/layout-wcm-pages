@@ -60,13 +60,24 @@ public class ChangeViewComponent {
     
     @PostConstruct
     public void init(){
+        getCookieValue();
+        compiledList.forEach(item -> item.setSelected(false));
+        compiledList.stream()
+                .filter( item ->
+                        item.getValue().equals(value)
+                ).findFirst()
+                .ifPresent(
+                        item -> item.setSelected(true)
+                );
+    }
+    
+    private void getCookieValue() {
         Cookie cookie = CookieUtil.getCookie(request, "USER_GROUP");
         if(cookie != null){
            value = cookie.getValue();
         }else{
             value = StringUtils.EMPTY;
         }
-        compiledList.stream().filter( item -> item.getValue().equals(value)).findFirst().ifPresent(item -> item.setSelected(true));
     }
     
     public List<Item> getCookieViews(){

@@ -29,6 +29,6 @@
     
     $(document).ready(function(){
         var timeInMs = print_nav_timing_data();
-        $(".loadtime").text(timeInMs +'ms');
+        $(".loadtime").text(Math.round(timeInMs) +'ms');
     });
 </script>
