@@ -22,7 +22,7 @@ public class MenuEntryFilter {
 
     public static final String PN_SHOW_FOR_USER_GROUPS = "showForUserGroupsOnly";
 
-    private boolean filtered = false;
+    private boolean passingFilter;
 
     @Self
     private SlingHttpServletRequest request;
@@ -41,7 +41,9 @@ public class MenuEntryFilter {
         //only if the menuitem has show user groups defined, proceed with the filter
         if(!userGroups.isEmpty()){
             User user = userService.getUser(request);
-            filtered = userGroups.contains(user.getGroup());
+            passingFilter = userGroups.contains(user.getGroup());
+        }else{
+            passingFilter = true;
         }
 
     }
@@ -53,7 +55,7 @@ public class MenuEntryFilter {
     }
 
 
-    public boolean isFiltered() {
-        return filtered;
+    public boolean isPassingFilter() {
+        return passingFilter;
     }
 }
